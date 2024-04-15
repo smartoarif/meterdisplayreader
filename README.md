@@ -5,6 +5,8 @@ The fastapi endpoint /meterimage accepts a file upload (image of an electricity 
 
 **install**
 
+git clone https://github.com/smartoarif/meterdisplayreader.git<br>
+cd meterdisplayreader<br>
 pip install -r requirements.txt
 
 **run**
