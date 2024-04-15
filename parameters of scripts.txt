@@ -1,0 +1,21 @@
+public dataset of 7-segment display
+https://universe.roboflow.com/labmonitor/7-segment-digit-number-display/dataset/1
+
+training models with custom dataset 
+python train.py --batch 8 --epochs 80 --data 7segment.v1i.yolov7pytorch\data.yaml --weights yolov7-tiny.pt --device cpu --hyp data\hyp.scratch.tiny.recognizer.yaml --cfg cfg\training\yolov7-tiny.yaml --img-size 640 640
+
+python detect.py --weights runs\train\exp12\weights\best.pt --source 7segment.v1i.yolov7pytorch\test\images --conf-thres 0.51 --device cpu --img-size 640
+
+
+[tensor([[288.50079, 131.46288, 309.96594, 164.15254,   0.97432,   4.00000],
+        [222.35379, 131.37128, 243.81534, 164.36829,   0.95722,   0.00000],
+        [331.19376, 132.19022, 351.78317, 166.36050,   0.95082,   6.00000],
+        [312.37112, 131.81902, 330.90665, 164.47972,   0.94788,   1.00000],
+        [339.63800, 166.82985, 351.95746, 189.02861,   0.94551,   6.00000],
+        [266.21042, 130.90659, 287.78464, 165.94449,   0.94248,   6.00000],
+        [244.51910, 129.30475, 264.51797, 163.97861,   0.93649,   0.00000],
+        [310.94183, 166.79723, 324.25482, 188.05098,   0.90717,   2.00000],
+        [325.50638, 167.89969, 337.22763, 187.92020,   0.89852,   8.00000],
+        [297.30728, 167.12144, 310.45328, 187.69893,   0.88818,   2.00000],
+        [368.81940, 145.31705, 379.72968, 163.98599,   0.77846,   1.00000],
+        [355.02213, 142.17036, 367.15994, 162.89458,   0.77550,   2.00000]])]
